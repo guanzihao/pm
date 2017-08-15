@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>云贸通</title>
+		<link rel="stylesheet" type="text/css" href="css/pro.css"/>
+          <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script> 
+          <script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div style="position: relative; z-index: 999;">
+		<div class="nav">
+			<span class="left" style="font-size: 15px;padding-left: 32px;">云贸通</span>
+			<span class="right" style="font-size: 13px; padding-right: 22px;" onclick="javascript:window.location.href='login1.html'"><a href="#"><i class="iconfont icon_exe">&#xe602;</i>Admin</a></span>
+		</div>
+		<div id="firstpane" class="menu_list">
+			<h3 class="menu_head  current_menu" onclick="javascript:window.location.href='index.html'">首页</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='proar.html';">新增任务</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='bug.html';">我提交的任务</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='report.html';">任务列表</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='system_manage.html';">站内消息</h3>
+            <h3 class="menu_head " onclick="javascript:window.location.href='index.html'">公告通知</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='proar.html';">统计管理</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='bug.html';">在线客服</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='report.html';">聊天室</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='system_manage.html';">公司管理</h3>
+            <h3 class="menu_head" onclick="javascript:window.location.href='system_manage.html';">个人信息</h3>
+		</div>
+		<div class="m_body">
+			<div class="now_place">
+				<span class="now">当前位置：</span><a href="#" class="now_place">任务进度</a>
+			</div>
+			    <script type="text/javascript">  
+        function showdiv(){  
+            document.getElementById('mm').style.display = 'none';  
+            document.getElementById('strhref').innerHTML="&#xe603;&nbsp;显示搜索条件";  
+            document.getElementById('white_place').style.height="830px";
+            document.getElementById('white_place').style.marginTop="10px";
+            document.getElementById('strhref').href="javascript:hidediv()";  
+        }  
+        function hidediv(){  
+            document.getElementById('mm').style.display = 'block';  
+            document.getElementById('strhref').innerHTML="&#xe605;&nbsp;隐藏搜索条件";  
+                        document.getElementById('white_place').style.height="668px";
+            document.getElementById('strhref').href="javascript:showdiv()";  
+        }  
+    </script>  
+			
+		<div class="white_place" id="white_place">
+		
+		<div style="margin-top:20px;padding-top:20px;"></div>
+				<div class="yw_apply blue" ><span style="font-size: 20px;font-weight: bold;padding-right: 5px;">1</span><a href="data_change1.html">单证制作</a><span class="sanjiao ssanjiao_bg"></span></div>
+		<div>
+			<span class="sanjiao_small sanjiao_topb" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottomb"></span>
+			<div class="yw_apply blue" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">2</span>信用证开证<span class="sanjiao ssanjiao_bg"></span>
+			</div>
+		</div>
+				<div>
+			<span class="sanjiao_small sanjiao_topb" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottomb"></span>
+			<div class="yw_apply blue" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">3</span>收汇<span class="sanjiao ssanjiao_bg"></span>
+			</div>
+		</div>
+				<div>
+			<span class="sanjiao_small sanjiao_topb" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottomb"></span>
+			<div class="yw_apply blue" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">4</span>出口清关<span class="sanjiao ssanjiao_bg"></span>
+			</div>
+		</div>
+        <div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">5</span>结算开票<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+        <div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">6</span>退税申请<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+        <div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">7</span>退税返回<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+				<div class="table_css" style="display: block;width: 100%;min-width: 1000px;" id="hz_page">
+			<table border="0" cellspacing="0" cellpadding="0">
+<tr class="headline">
+					<td style="width: 12%;">操作</td>
+					<td style="width: 4%;">序号</td>
+					<td style="width: 14%;">子任务流水号</td>
+					<td style="width: 8%;">任务类型</td>
+					<td style="width: 8%;" >供应商分类</td>
+					<td style="width: 10%;">供应商</td>
+					<td style="width: 10%;">预计开始日期</td>
+					<td style="width: 10%;">预计完成日期</td>
+					
+				</tr>
+				    <tr class="content">
+                     <td><a href="#">查看<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+					<td >1</td>
+                    <td >2017052000001</td>
+					<td >报关</td>
+					<td>外部供应商</td>
+                    <td>abc供应商</td>
+					<td >2017-05-02</td>
+                    <td >2017-05-30</td>
+                   
+                    
+				</tr>
+				    <tr class="content td_blue" >
+                     <td><a href="#">查看<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+					<td >2</td>
+                    <td >2017052000002</td>
+					<td >报关</td>
+					<td>平台供应商</td>
+                    <td>闵行分公司</td>
+					<td >2017-05-02</td>
+                    <td >2017-05-30</td>
+                    
+				</tr>
+				
+				                
+				                
+				                
+				               
+				                				             
+			</table>
+		</div>
+	
+						<div class="table_css" style="display: none;width: 100%;min-width: 1000px;" id="mx_page">
+			<table border="0" cellspacing="0" cellpadding="0">
+                <tr class="headline">
+					<td style="width: 4%;">序号</td>
+					<td style="width: 14%;">项目名称</td>
+					<td style="width: 8%;">客户</td>
+					<td style="width: 8%;" >日期↓</td>
+					<td style="width: 6%;">状态</td>
+					<td style="width: 12%;">操作</td>
+				</tr>
+				    <tr class="content hz_con">
+					<td >1</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司1</td>
+					<td >2017/05/19</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+				    <tr class="content hz_con td_blue">
+					<td >2</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司2</td>
+					<td >2017/05/21</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+                <tr class="content hz_con">
+					<td >1</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司1</td>
+					<td >2017/05/19</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+				    <tr class="content hz_con td_blue">
+					<td >2</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司2</td>
+					<td >2017/05/21</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+                <tr class="content hz_con">
+					<td >1</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司1</td>
+					<td >2017/05/19</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+				    <tr class="content hz_con td_blue">
+					<td >2</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司2</td>
+					<td >2017/05/21</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+                <tr class="content hz_con">
+					<td >1</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司1</td>
+					<td >2017/05/19</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+				    <tr class="content hz_con td_blue">
+					<td >2</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司2</td>
+					<td >2017/05/21</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+                <tr class="content hz_con">
+					<td >1</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司1</td>
+					<td >2017/05/19</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+				    <tr class="content hz_con td_blue">
+					<td >2</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司2</td>
+					<td >2017/05/21</td>
+					<td >未分配</td>
+					<td ><a href="user_modify.html" style="color: #38A4FC;cursor: pointer;">编辑<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+				</tr>
+			</table>
+		</div>
+		
+		
+		
+	
+				<div class="clear"></div>
+		</div>
+
+</div>
+
+</div>
+
+<div class="op" id="op"></div>
+	    <div class="box_con animated zoomIn"    value="1">
+				<div class="expert" id="drop">
+				<span class="expert_txt">手动更新状态</span>
+				<span  class="close right fun_close" value="1" >×</span>
+			</div>
+			<div class="startorstop">
+				<div>开始日期：<input type="text" id="inp" value="" class="inp"/><i class="iconfont icon_position" id="iconf">&#xe615;</i></div>
+				<div>结束日期：<input type="text" value="" class="inp1" /><i class="iconfont icon_position" id="iconf1" >&#xe615;</i></div>
+			</div>
+			<div class="exe_btn">
+				<button class="left blue ">确定</button>
+				<button class="right">取消</button>
+			</div>
+			</div>
+	
+	    <div class="box_con animated zoomIn"   value="2">
+				<div class="expert">
+				<span class="expert_txt">选择导出截止日期</span>
+				<span  class="close right fun_close" value="2">×</span>
+			</div>
+			<div class="startorstop " style="margin: 45px 0px ;">
+				<span style="font-size: 15px;">选择截止日期：</span>
+									<span>
+						<dl class="select" style="display: inline-block;position: absolute;    ">
+		<dt style="width: 68px;height: 22px;line-height: 22px; position: relative; top: -2px;"><span id="changes">2017年</span><i class="iconfont arrow">&#xe617;</i></dt>
+		<dd style="    position: absolute;z-index: 10000;" id="dd_a5">
+			<ul class="u_long4">
+				<li><a href="#">2017年</a></li>
+				<li><a href="#">2016年</a></li>
+				<li><a href="#">2015年</a></li>
+				<li><a href="#">2014年</a></li>
+				<li><a href="#">2013年</a></li>
+				<li><a href="#">2012年</a></li>
+				<li><a href="#">2011年</a></li>
+				<li><a href="#">2010年</a></li>
+				<li><a href="#">2009年</a></li>
+				<li><a href="#">2008年</a></li>
+				<li><a href="#">2007年</a></li>
+				<li><a href="#">2006年</a></li>
+				<li><a href="#">2005年</a></li>
+				<li><a href="#">2004年</a></li>
+				<li><a href="#">2003年</a></li>
+				<li><a href="#">2002年</a></li>
+				<li><a href="#">2001年</a></li>
+				<li><a href="#">2000年</a></li>
+			</ul>
+		</dd>
+	</dl>
+					</span>
+														<span>
+						<dl class="select" style="display: inline-block;position: absolute; margin-left: 98px;   ">
+		<dt style="width: 68px;height: 22px;line-height: 22px; position: relative; top: -2px;"><span id="changese">4月</span><i class="iconfont arrow">&#xe617;</i></dt>
+		<dd style="    position: absolute;z-index: 10000;" id="dd_a6">
+			<ul class="u_long4">
+				<li><a href="#">1月</a></li>
+				<li><a href="#">2月</a></li>
+				<li><a href="#">3月</a></li>
+				<li><a href="#">4月</a></li>
+				<li><a href="#">5月</a></li>
+				<li><a href="#">6月</a></li>
+				<li><a href="#">7月</a></li>
+				<li><a href="#">8月</a></li>
+				<li><a href="#">9月</a></li>
+				<li><a href="#">10月</a></li>
+				<li><a href="#">11月</a></li>
+				<li><a href="#">12月</a></li>
+ 
+			</ul>
+		</dd>
+	</dl>
+					</span>
+			</div>
+			<div class="exe_btn">
+				<button class="left blue ">确定</button>
+				<button class="right">取消</button>
+			</div>
+			</div>
+			
+			
+					
+
+<div class="op" ></div>
+	    <div class="box_con animated zoomIn noaccess"  >
+				<div class="expert" >
+				<span class="expert_txt">&nbsp;</span>
+			</div>
+			<div style="text-align: center;margin-top: 23px;">
+				<img src="images/No Access.png"/>
+			</div>
+			<div   style="text-align: center;cursor: pointer;"><button class="bug_btn sure" >确定</button></div>
+			</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,36 @@
+.mo-process .first .mo-process-mark i {
+    margin-left: none;
+}
+
+.mo-process-content div{
+	margin-top: 8px;
+}
+
+.label {
+    font-size: 12px !important;
+}
+
+#jiedians1{
+	padding-left: 44%;
+}
+
+/* 上部分节点的  */
+.mo-list-head {
+    border: none !important;
+}
+/* 上部分节点的间距 */
+.mo-order-list .mo-list-item-order{
+	padding-bottom: 0px !important;
+}
+
+.ibox-title{
+	padding: 0 !important;
+	min-height: 10px;
+}
+
+.ibox-content{
+	padding: 10px 0px !important;
+}
+
+
+

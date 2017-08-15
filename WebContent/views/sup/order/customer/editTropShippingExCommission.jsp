@@ -1,0 +1,575 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%@ include file="/include/includeHeader.jsp" %>
+<link rel="stylesheet" href="${basePath }/resource/css/bootstrap-table.css">
+<script src="${basePath }/resource/js/bootstrap-table.js"></script>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			p{
+				margin: 0;
+			}
+			button{
+				border: none;
+			}
+			span{
+				display: inline;
+			}
+			.col-sm-8 textarea{
+				margin-left: 25px;
+			}
+			.container{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.row{
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+				padding: 0;
+			}
+			
+			html,body{
+			    width: 100%;
+			    background: #f5f7fa;
+			    /*height: 100%;*/
+			}
+			
+			#box{
+			    width: 100%;
+			    /*height: 100%;
+			    overflow: scroll;*/
+			}
+			#main{
+			    min-width: 600px;
+			    /*min-height: 100%;*/
+			    background: #f5f7fa;
+			    float: none;
+			    margin: 0 auto; 
+			}
+			font{
+				color: red;
+				
+			}
+			font{
+				color: red;
+				
+			}
+			.col-sm-3 input{
+				margin-left: 25px;
+			}
+			.col-sm-3 select{
+				margin-left: 25px;
+			}
+			.col-sm-3 input{
+				margin-left: 25px;
+			}
+			.col-sm-3 select{
+				margin-left: 25px;
+			}
+			
+			/*  清除浮动 */
+			#main:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+			
+			#main{zoom:1}
+			
+			/*上方订单编号*/
+			.top{
+				background: #fff;
+				padding: 10px 20px;
+			}
+			
+			.top_item{
+				height: 26px;
+			}
+			
+			/* 按钮 */
+			.nav_button{
+				padding: 0 10px;
+				height: 38px;
+				background: #f5f7fb;
+				border:1px solid #dbe3ed;
+				color: #000;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				
+			}
+			.nav_button:focus{
+				outline:none;
+			}
+			
+			.active{
+				background: #fff;
+				color: #ee7600;
+				border-top: 3px solid #EE7600;
+			}
+			
+			/*主要内容*/
+			#myTabContent{
+				border: 1px solid #dedede;
+				padding: 0 5px 20px 0;
+				
+			}
+			
+			/*当前选择*/
+			#title{
+				margin-top: 10px;
+				margin-bottom: 20px;
+				padding: 0 20px;
+				height: 60px;
+				line-height: 60px;
+				background: #FFFFFF;
+				border: 1px solid #e9eef5;				
+			}
+			
+			.choose{
+				background: #999999;
+				color: #fff;
+				padding: 2px 10px;
+				border-radius: 2px;
+				font-weight: bold;
+				margin-right: 4px;
+			}
+			
+			.choose_explain{
+				width: 50%;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			
+			a {
+			    color: #06c;
+			    text-decoration: none;
+			}
+			
+
+			a:hover {
+			    color: #f90;
+			    text-decoration: underline;
+			}
+
+			.fr{
+				float: right;
+			}
+			
+			/*每个大步骤*/
+			.step {
+			    position: relative;
+			    padding-bottom: 30px;
+			}
+			.step::before {
+			    content: '';
+			    position: absolute;
+			    top: 0;
+			    left: 14px;
+			    width: 1px;
+			    height: 100%;
+			    background: #DAE2ED;
+			}
+			
+			/*标题*/
+			h2{
+				margin-top: 0;
+			}
+			
+			.step_header {
+			    font-size: 16px;
+			    font-weight: 500;
+			    color: #333;
+			    padding-bottom: 10px;
+			    margin-bottom: 0;
+			    position: relative;
+			}
+			
+			.step_icon{
+				margin-right: 10px;
+			}
+			
+			.step_content{
+				background: #FFFFFF;
+				border: 1px solid #e9eef5;	
+				padding: 20px 20px 20px 50px;	
+			}
+			
+			.ui_form_item{
+				height: 40px;
+				line-height: 40px;
+				margin-bottom: 10px;
+				position: relative;
+			}
+			
+			.ui_form_item_left{
+				width: 100px;
+				height: 40px;
+				display: inline-block;
+				line-height: 40px;
+			}
+			
+			.ui_form_required{
+				color: red;
+				font-size: 12px;
+			}
+			
+			
+			input {
+				height: 30px;
+				width: 180;
+				border: 1px solid #cccccc;
+				border-radius: 4px;
+				text-indent: 10px;
+			}
+			
+			select {
+				height: 30px;
+				width: 250px;
+				border: 1px solid #cccccc;
+				border-radius: 4px;
+				text-indent: 10px;
+			}
+			
+			
+			.ui_form_button{
+				background: #FF7519;
+    			color: #FFF;
+    			padding: 4px 10px;
+    			border-radius: 4px;
+    			display: block;
+			}
+			
+			.ui_form_right{
+				margin-left: 104px;
+			}
+			
+			.ui_button{
+				padding: 6px 20px;
+				background: #fff;
+				color: #333;
+				border: 1px solid #c6cad1;
+				border-radius: 2px;
+				font-size: 18px;
+			}
+			
+			.disabled{
+				background: #f5f7fa;
+				color: #cccccc;
+				border-color:#dae2ed;
+			}
+			
+			.submit{
+				margin-left: 116px;
+				margin-right: 4px;
+			}
+			
+			.pam{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+<div id="boxTrop" class="container">
+			<div class="row">
+				<div class="ibox-title">
+                    <a class="btn btn-white btn-sm myBtn" onclick="JavaScript:history.back(-1);">
+						<span>返回</span>
+					</a>
+                </div>
+				<div id="main" class="col-xs-12">
+				<form id="wlTropForm" class="form-horizontal formValidate" action="${basePath }/sup/wuliutrop/saveObject/${nodeType}/${flowId}/${isCompany}" method="post">
+					<input type="hidden" name="id" value="${tsc.id }">
+					<input type="hidden" id="isDelegationId" name="isDelegation" value="${tsc.isDelegation }">
+					<input type="hidden" name="orderFromId" value="${tsc.orderFromId }">
+						<input type="hidden" name="userId" value="${tsc.userId }">
+						<input type="hidden" name="taskId" value="${tsc.taskId }">
+					<div id="myTabContent" class="col-xs-12">
+						<article class="step col-xs-12 wlTrop1-1">
+							<h2 class="step_header">
+								<img src="${basePath }/resource/images/icon_c1.png" class="step_icon wlTrop1-2" alt=""  />
+								物流运输
+							</h2>
+
+							<div class="ibox-content wlTrop1-3">
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">委托方<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.consignor }" id="wlTropconsignor" name="consignor" class="form-control"  required=""  ></div>
+		                        	<c:if test="${tsc.isDelegation eq '0' }">
+			                        	<label class="col-sm-2 control-label">起运地<font>*</font></label>
+			                            <div class="col-sm-3"><input type="text" value="${tsc.departurePort }" name="departurePort" class="form-control"  required=""  ></div>
+	                        		</c:if>
+	                        	</div>
+	                        <c:if test="${tsc.isDelegation eq '0' }">
+	                        	<div class="form-group">
+	                        		<label class="col-sm-2 control-label">目的地<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.dischargePort }" name="dischargePort" class="form-control"  required=""   ></div>
+		                        	<label class="col-sm-2 control-label">支付方式<font>*</font></label>
+		                        	<div class="col-sm-3">
+		                        		<select class="selectpicker" name="payWay" id="wlTroppayWay">
+		                            		<c:forEach items="${wlzffsList }" var="item">
+		                            			<c:choose>
+		                            				<c:when test="${item.name eq tsc.payWay }">
+		                            					<option value="${item.name }" selected="selected">${item.name }</option>
+		                            				</c:when>
+		                            				<c:otherwise>
+		                            					<option value="${item.name }">${item.name }</option>
+		                            				</c:otherwise>
+		                            			</c:choose>
+		                            		</c:forEach>
+	                            		</select>
+		                        	</div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">件数<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.item }" name="item" class="form-control" digits="true" required=""  ></div>
+		                        	<label class="col-sm-2 control-label">毛重<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.weight }" name="weight"  class="form-control"  required="" number="true"  ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">体积<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.volume }" name="volume" class="form-control" digits="true" required=""  ></div>
+		                        	<label class="col-sm-2 control-label">品名<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.goodsName }" name="goodsName" class="form-control"  required=""  ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">托运联系人<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.contactPerson }" name="contactPerson" class="form-control"  required=""   ></div>
+	                        		<label class="col-sm-2 control-label">特殊要求<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.specialNotes }" name="specialNotes" class="form-control"  required=""   ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">电话<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.cpPhone }" name="cpPhone" class="form-control"  required=""  ></div>
+		                        	<label class="col-sm-2 control-label">邮箱<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.cpMail }" name="cpMail" class="form-control"  required="" email="true"  ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">托运人地址<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.sAddress }" name="sAddress" class="form-control"    ></div>
+		                        	<label class="col-sm-2 control-label">卸货港<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.destinationPort }" name="destinationPort" class="form-control"   ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">编号<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.xhsNo }" name="xhsNo" class="form-control"    ></div>
+		                        	<label class="col-sm-2 control-label">收货人<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.consignee }" name="consignee" class="form-control"   ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">收货人地址<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.cAddress }" name="cAddress" class="form-control"    ></div>
+		                        	<label class="col-sm-2 control-label">货到时间<font></font></label>
+									<div class="col-sm-3"><input type="text"  name="arrivalDate"  value="<fmt:formatDate value="${tsc.arrivalDate }" pattern="yyyy-MM-dd"/>" class="form-control date-picker" dateISO="true"  ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">托运人<font></font></label>
+			                         <div class="col-sm-3"><input type="text" value="${tsc.shipper }" name="shipper" class="form-control"   ></div>
+		                        	<label class="col-sm-2 control-label">箱型/箱量<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.container }" name="container" digits="true" class="form-control"  number="true"  ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">提单类型<font></font></label>
+		                            <div class="col-sm-3">
+		                        		<select class="selectpicker" name="blt">
+		                            		<c:forEach items="${wltdlxList }" var="item">
+		                            			<c:choose>
+		                            				<c:when test="${item.name eq tsc.blt }">
+		                            					<option value="${item.name }" selected="selected">${item.name }</option>
+		                            				</c:when>
+		                            				<c:otherwise>
+		                            					<option value="${item.name }">${item.name }</option>
+		                            				</c:otherwise>
+		                            			</c:choose>
+		                            		</c:forEach>
+	                            		</select>
+		                        	</div>
+		                        	<label class="col-sm-2 control-label">通知人<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.notifier }" name="notifier" class="form-control"    ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">唛头<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.marks }" name="marks" class="form-control"    ></div>
+		                        	<label class="col-sm-2 control-label">运费确认<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.transExpenseCharge }" name="transExpenseCharge" class="form-control"    ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">传真<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.cpFax }" name="cpFax" class="form-control"    ></div>
+		                        	<label class="col-sm-2 control-label">预配航班<font>*</font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.preFlight }" name="preFlight" class="form-control"    ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">自拉自报<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.selfFull }" name="selfFull" class="form-control"   ></div>
+		                        	<label class="col-sm-2 control-label">运费条款<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.transClause }" name="transClause" class="form-control"   ></div>
+	                        	</div>
+	                        	<div class="form-group">
+		                        	<label class="col-sm-2 control-label">签名盖章<font></font></label>
+		                            <div class="col-sm-3"><input type="text" value="${tsc.signature }" name="signature" class="form-control"   ></div>
+	                        	</div>
+	                        </c:if>
+	                        	<div class="col-xs-12">
+									<button type="button" class="ui_form_button ui_form_right wlTrop1-4">下一步</button>
+								</div>
+							</div>
+						</article>
+						<article class="step col-xs-12 wlTrop2-1">
+								<h2 class="step_header">
+									<img src="${basePath }/resource/images/icon_f2.png" class="step_icon wlTrop2-2" alt="" />
+									期望完成时间
+								</h2>
+								<div class="step_content col-xs-11 col-xs-offset-1 wlTrop2-3" style="display: none;">
+									<c:choose>
+										<c:when test="${supCompanyInFo eq '1' }">
+											<div class="form-group">
+					                        	<label class="col-sm-2 control-label">开始时间<font>*</font></label>
+					                           <div class="col-sm-3"><input type="text" id="startDateWlTropId" name="startDate" readonly="readonly" value="<fmt:formatDate value="${tsc.startDate }" pattern="yyyy-MM-dd"/>"  class="form-control" dateISO="true"  required="" ></div>
+					                        	<label class="col-sm-2 control-label">结束时间<font>*</font></label>
+					                            <div class="col-sm-3"><input id="endDateWlTropId" type="text"  name="endDate" readonly="readonly" class="form-control"   value="<fmt:formatDate value="${tsc.endDate }" pattern="yyyy-MM-dd"/>"   dateISO="true" required=""></div>
+				                        	</div>
+				                        	<div class="form-group">
+					                      		<label class="col-sm-2 control-label">内容详情<font></font></label>
+												<div class="col-sm-8"><textarea name="explain" readonly="readonly" id="explainWlTropId" class="form-control " rows="6" >${tsc.explain }</textarea></div>
+											</div>
+										</c:when>
+										<c:otherwise>
+											<div class="form-group">
+			                        	<label class="col-sm-2 control-label">开始时间<font>*</font></label>
+			                           <div class="col-sm-3"><input type="text" id="startDateWlTropId" name="startDate"  value="<fmt:formatDate value="${tsc.startDate }" pattern="yyyy-MM-dd"/>"  class="form-control date-picker" dateISO="true"  required="" ></div>
+			                        	<label class="col-sm-2 control-label">结束时间<font>*</font></label>
+			                            <div class="col-sm-3"><input id="endDateWlTropId" type="text"  name="endDate" class="form-control date-picker"   value="<fmt:formatDate value="${tsc.endDate }" pattern="yyyy-MM-dd"/>"   dateISO="true" required=""></div>
+		                        	</div>
+		                        	<div class="form-group">
+			                      		<label class="col-sm-2 control-label">内容详情<font></font></label>
+										<div class="col-sm-8"><textarea name="explain" id="explainWlTropId" class="form-control " rows="6" >${tsc.explain }</textarea></div>
+									</div>
+										</c:otherwise>
+									</c:choose>
+									<div class="col-xs-12">
+										<button type="button" class="ui_form_button ui_form_right  wlTrop2-4">下一步</button>
+									</div>
+								</div>
+							</article>
+				<c:if test="${tsc.isDelegation eq '0' }">		
+						<article class="step col-xs-12 wlTrop3-1">
+							<h2 class="step_header">
+								<img src="${basePath }/resource/images/icon_f3.png" class="step_icon wlTrop3-2" alt="" />
+								附件上传
+							</h2>
+							<div class="step_content col-xs-11 col-xs-offset-1 wlTrop3-3" style="display: none;">
+							   <div class="form-group">
+			                            <div class="col-sm-10">
+			                            	<pm:fileList metaObject="${tsc }" delete="true" name="fileArray" metaColums="columsWlTrop"/>
+			                            	<c:import url="/include/includeUploadify.jsp">
+			                            		<c:param  name="propertyName" value="fileArray"/>
+												<c:param  name="metaColums" value="columsWlTrop"/>
+										    </c:import>
+			                            </div>
+		                        	</div> 
+							</div>
+						</article>
+				</c:if>
+						<div class="col_xs_12">
+							<button type="submit" class="ui_button submit disabled">提交订单</button>
+							
+						</div>
+					</div>
+				</form>
+				</div>
+				<div>
+				</div>
+			</div>
+		  </div>
+	</body>
+<%@ include file="/include/includeJs.jsp" %>
+<script type="text/javascript">
+var aaa=false;
+var bbb=false;
+var isDelegation=0;
+$(function(){
+	isDelegation=$("#isDelegationId").val();
+});
+$(".wlTrop1-2").click(function() {
+	$("#wlTropForm").validate();
+	 if($("#wlTropForm").valid()&&aaa){
+		$(".wlTrop1-2").attr("src","${basePath }/resource/images/icon_c1.png");
+		$(".wlTrop2-2").attr("src","${basePath }/resource/images/icon_f2.png");
+		$(".wlTrop3-2").attr("src","${basePath }/resource/images/icon_f3.png");
+		$(".wlTrop1-3").show();
+		$(".wlTrop2-3").hide();
+		$(".wlTrop3-3").hide();
+	}
+
+});
+$(".wlTrop2-2").click(function() {
+	$("#wlTropForm").validate();
+	if($("#wlTropForm").valid()&&bbb){
+		$(".wlTrop1-2").attr("src","${basePath }/resource/images/icon_f1.png");
+		$(".wlTrop2-2").attr("src","${basePath }/resource/images/icon_c2.png");
+		$(".wlTrop3-2").attr("src","${basePath }/resource/images/icon_f3.png");
+		$(".wlTrop1-3").hide();
+		$(".wlTrop2-3").show();
+		$(".wlTrop3-3").hide();
+	}
+
+});
+$(".wlTrop3-2").click(function() {
+	$("#wlTropForm").validate();
+	if($("#wlTropForm").valid()&&bbb){
+		$(".wlTrop1-2").attr("src","${basePath }/resource/images/icon_f1.png");
+		$(".wlTrop2-2").attr("src","${basePath }/resource/images/icon_f2.png");
+		$(".wlTrop3-2").attr("src","${basePath }/resource/images/icon_c3.png");
+		$(".wlTrop1-3").hide();
+		$(".wlTrop2-3").hide();
+		$(".wlTrop3-3").show();
+	}
+
+});
+$(".wlTrop1-4").click(function() {
+	$("#wlTropForm").validate();
+	 if($("#wlTropForm").valid()){
+		 if (isDelegation=='1') {
+			 	$(".wlTrop1-2").attr("src","${basePath }/resource/images/icon_f1.png");
+				$(".wlTrop2-2").attr("src","${basePath }/resource/images/icon_c2.png");
+				$(".wlTrop1-3").hide();
+				$(".wlTrop2-3").show();
+		}else{
+			$(".wlTrop1-2").attr("src","${basePath }/resource/images/icon_f1.png");
+			$(".wlTrop2-2").attr("src","${basePath }/resource/images/icon_c2.png");
+			$(".wlTrop3-2").attr("src","${basePath }/resource/images/icon_f3.png");
+			$(".wlTrop1-3").hide();
+			$(".wlTrop2-3").show();
+			$(".wlTrop3-3").hide();
+			aaa=true;
+		}
+	}
+});
+$(".wlTrop2-4").click(function() {
+	$("#wlTropForm").validate();
+	 if($("#wlTropForm").valid()){
+	 	if (isDelegation=='1') {
+		 	$(".wlTrop1-2").attr("src","${basePath }/resource/images/icon_c1.png");
+			$(".wlTrop2-2").attr("src","${basePath }/resource/images/icon_f2.png");
+			$(".wlTrop1-3").show();
+			$(".wlTrop2-3").hide();
+			bbb=true;
+		}else{
+			$(".wlTrop1-2").attr("src","${basePath }/resource/images/icon_f1.png");
+			$(".wlTrop2-2").attr("src","${basePath }/resource/images/icon_f2.png");
+			$(".wlTrop3-2").attr("src","${basePath }/resource/images/icon_c3.png");
+			$(".wlTrop1-3").hide();
+			$(".wlTrop2-3").hide();
+			$(".wlTrop3-3").show();
+			bbb=true;
+		}
+	}
+});
+</script>
+<%@ include file="/include/includeFooter.jsp" %>

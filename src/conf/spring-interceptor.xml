@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans classpath:org/springframework/beans/factory/xml/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/mvc classpath:org/springframework/web/servlet/config/spring-mvc-4.2.xsd">
+
+	<mvc:interceptors>
+		<!-- 判断SQL注入 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.pm.core.interceptor.SqlInterceptor" />
+		</mvc:interceptor>
+
+		<!-- 重复提交 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.pm.framework.interceptor.CheckSubmitInterceptor" />
+		</mvc:interceptor>
+		
+		<!-- 拦截权限 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/pm/**" />
+			<bean class="com.pm.right.interceptor.AuthorityInterceptor" />
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/sup/**" />
+			<bean class="com.pm.right.interceptor.AuthorityCompanyInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	
+</beans>

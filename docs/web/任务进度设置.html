@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>云贸通</title>
+		<link rel="stylesheet" type="text/css" href="css/pro.css"/>
+          <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script> 
+          <script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div style="position: relative; z-index: 999;">
+		<div class="nav">
+			<span class="left" style="font-size: 15px;padding-left: 32px;">云贸通</span>
+			<span class="right" style="font-size: 13px; padding-right: 22px;" onclick="javascript:window.location.href='login1.html'"><a href="#"><i class="iconfont icon_exe">&#xe602;</i>Admin</a></span>
+		</div>
+		<div id="firstpane" class="menu_list">
+			<h3 class="menu_head" onclick="javascript:window.location.href='index.html'">首页</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='proar.html';">待处理任务</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='bug.html';">计划安排</h3>
+			<h3 class="menu_head   current_menu" onclick="javascript:window.location.href='report.html';">任务列表</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='system_manage.html';">站内消息</h3>
+            <h3 class="menu_head " onclick="javascript:window.location.href='index.html'">公共通知</h3>
+            <h3 class="menu_head" onclick="javascript:window.location.href='bug.html';">在线客服</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='proar.html';">统计管理</h3>            
+			<h3 class="menu_head" onclick="javascript:window.location.href='system_manage.html';">公司管理</h3>
+            <h3 class="menu_head" onclick="javascript:window.location.href='system_manage.html';">个人信息</h3>
+		</div>
+		<div class="m_body">
+			<div class="now_place">
+				<span class="now">当前位置：</span><a href="#" class="now_place">任务进度</a>
+			</div>
+			    <script type="text/javascript">  
+        function showdiv(){  
+            document.getElementById('mm').style.display = 'none';  
+            document.getElementById('strhref').innerHTML="&#xe603;&nbsp;显示搜索条件";  
+            document.getElementById('white_place').style.height="830px";
+            document.getElementById('white_place').style.marginTop="10px";
+            document.getElementById('strhref').href="javascript:hidediv()";  
+        }  
+        function hidediv(){  
+            document.getElementById('mm').style.display = 'block';  
+            document.getElementById('strhref').innerHTML="&#xe605;&nbsp;隐藏搜索条件";  
+                        document.getElementById('white_place').style.height="668px";
+            document.getElementById('strhref').href="javascript:showdiv()";  
+        }  
+    </script>  
+			
+		<div class="white_place" id="white_place">
+		<div style="margin-top:20px;padding-top:20px;"></div>
+				<div class="yw_apply blue" ><span style="font-size: 20px;font-weight: bold;padding-right: 5px;">1</span><a href="data_change1.html">单证制作</a><span class="sanjiao ssanjiao_bg"></span></div>
+		<div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">2</span>信用证开证<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+				<div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">3</span>收汇<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+				<div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">4</span>出口清关<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+        <div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">5</span>结算开票<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+        <div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">6</span>退税申请<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+        <div>
+			<span class="sanjiao_small sanjiao_top" style="    position: relative;left: 20px;"></span>
+			<span class="sanjiao_small sanjiao_bottom"></span>
+			<div class="yw_apply no_change" >
+				<span style="font-size: 20px;font-weight: bold;padding-right: 5px;">7</span>退税返回<span class="sanjiao no_ssanjiao_bg"></span>
+			</div>
+		</div>
+		<div class="clear"></div>
+				<div class="table_css" style="display: block;width: 100%;min-width: 1000px;" id="hz_page">
+			<table border="0" cellspacing="0" cellpadding="0">
+<tr class="headline">
+					<td style="width: 12%;">操作</td>
+					<td style="width: 4%;">序号</td>
+                    <td style="width: 4%;">节点</td>
+					<td style="width: 8%;" >日期↓</td>
+                    <td style="width: 4%;">合同号码</td>
+                    <td style="width: 4%;">合同金额</td>
+                    <td style="width: 4%;">币种</td>
+					<td style="width: 8%;">状态</td>
+					<td style="width: 12%;">附件</td>
+				</tr>
+				    <tr class="content">
+                    <td><a href="#">查看<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+					<td >1</td>
+                    <td></td>
+					<td >2017/05/02</td>
+                    <td>20170603000001</td>
+                    <td>1000000.00</td>
+                    <td>RMB</td>
+					<td>已完成</td>
+					<td >附件1</td>
+				</tr>
+				    <tr class="content td_blue" >                
+                    <td><a href="#">查看<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+					<td >2</td>
+                    <td></td>
+					<td >2017/05/02</td>
+                    <td>20170603000002</td>
+                    <td>1000000.00</td>
+					<td>RMB</td>
+					<td>未完成&nbsp;&nbsp;<a href="#" style="color: #38A4FC;cursor: pointer;" id="open_exe" class="fun_btn" value="1">手动设置<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+					<td >附件2</td>
+				</tr>
+				
+				                
+				                
+				                
+				               
+				                				             
+			</table>
+		</div>
+	
+						
+		
+		
+		
+	
+				<div class="clear"></div>
+		</div>
+
+</div>
+
+</div>
+
+<div class="op" id="op"></div>
+	    <div class="box_con animated zoomIn"    value="1">
+				<div class="expert" id="drop">
+				<span class="expert_txt">手动更新状态</span>
+				<span  class="close right fun_close" value="1" >×</span>
+			</div>
+			<div class="b_msg" style="border-top: none;"> 
+	<div class="msg_email pad"><div><label>开始日期：</label><input type="text" name="" id="" value="" class="mima"/><i class="iconfont icon_position" id="iconf">&#xe615;</i></div><div><label>任务完成情况：</label>
+						<dl class="select"  style="margin-top: 0px;margin-left: 150px;position: absolute;">
+		<dt style="width: 209px;"><span id="changetwo" style="color: #333;">已完成</span><i class="iconfont arrow">&#xe617;</i></dt>
+		<dd style="    position: absolute;z-index: 10000;top: 22px;" id="dd_a2">
+			<ul class="u_long1">
+				<li><a href="#">未完成</a></li>
+				<li><a href="#">已完成</a></li>
+			</ul>
+		</dd>
+	</dl>
+	</div></div>
+	<div class="msg_email pad"><div><label>结束日期：</label><input type="text" name="" id="" value=""  class="mima" /><i class="iconfont icon_position" id="iconf">&#xe615;</i></div><div><label>上传附件：</label>
+		<div class="inputFileWrapper" style="padding: 0;">
+    <label for="inputFile" style="margin-left: 0px;">
+        <input type="file" id="inputFile"/>
+        <span class="custorm-style" style="margin-left: 0px;">
+            <span class="left-button"><i class="iconfont fun_on" style="position: relative;top: 2.5px;right: 2px;">&#xe600;</i></span>
+            <span class="right-text" id="rightText" style="position: relative;top: 1px;">上传附件</span>
+        </span>
+    </label>
+</div>
+	</div></div>
+	<div class="msg_email pad"><div><label>任务名称：</label><input type="text" name="" id="" value=""  class="mima" /><i class="iconfont icon_position" id="iconf"></i></div><div><label style="margin-left: 63px;">合同金额：</label><input type="text" name="" id="" value=""  class="mima" /></div></div>
+	<div class="msg_email pad"><div><label>合同号码：</label><input type="text" name="" id="" value=""  class="mima" /><i class="iconfont icon_position" id="iconf"></i></div><div><label style="margin-left: 63px;">币种：</label><input type="text" name="" id="" value=""  class="mima" /></div></div>
+	<div class="msg_email pad"><label>处理情况描述：</label><input type="text" name="" id="" value=""   class="email_inp bor_dag"/></div>
+	<div class="msg_email pad"><label>完成情况描述：</label><input type="text" name="" id="" value=""   class="email_inp bor_dag"/></div>
+	<div class="msg_email paddi" style="    text-align: center;"></div>
+   <div class="exe_btn">
+				<button class="left blue ">确定</button>
+				<button class="right">取消</button>
+			</div>
+</div>
+			
+			</div>
+		
+			
+			
+		
+			
+				
+
+<div class="op" ></div>
+
+	</body>
+
+</html>

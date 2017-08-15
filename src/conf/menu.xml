@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+  <!-- 平台  在菜单中加 orgtype="1" -->
+  <menu code="menu_10" name="首页" url="/organize/customIndex/customeHome"  icon="home" index="10" type="1" orgtype="1" remove="0"></menu>
+
+  <menu code="menu_20" name="客户管理" icon="users" index="20" type="1" orgtype="1" remove="0">
+    <menu code="menu_20_1" name="客户列表" url="/company/info/listCompanyInfo" index="2" type="1" orgtype="1" remove="0">
+      <menu code="info_listCompanyInfo" name="查询客户" index="1" type="2" orgtype="1" remove="0" />
+      <menu code="info_editCompanyInfo" name="维护客户" index="2" type="2" orgtype="1" remove="0" />
+      <menu code="info_enableCompanyInfo" name="启用客户" index="3" type="2" orgtype="1" remove="0" />
+      <menu code="info_disableCompanyInfo" name="禁用客户" index="4" type="2" orgtype="1" remove="0" />
+      <menu code="info_editCompanyInfoUser" name="维护联系人" index="5" type="2" orgtype="1" remove="0" />
+      <menu code="info_removeCompanyInfoUser" name="删除联系人" index="6" type="2" orgtype="1" remove="0" />
+      <menu code="info_enableCompanyInfoUser" name="启用联系人" index="7" type="2" orgtype="1" remove="0" />
+      <menu code="info_disableCompanyInfoUser" name="禁用联系人" index="8" type="2" orgtype="1" remove="0" />
+      <menu code="info_editCompanyInfoUserPwd" name="修改联系人密码" index="9" type="2" orgtype="1" remove="0" />
+    </menu>
+  </menu>
+  <menu code="menu_100" name="服务商信息" icon="users" index="30" type="1"  orgtype="1"  remove="0">		
+	<menu code="menu_100_1" name="服务商信息"   url="/supcompany/info/listSupCompanyInfo"  index="1" type="1"  orgtype="1"  remove="0"></menu>
+   	<menu code="menu_100_2" name="报关委托报价" index="2" url="/pm/consignationQuote/listBgConsignationQuote"  type="1" orgtype="1" remove="0" />
+   	<menu code="menu_100_3" name="物流委托报价" index="3" url="/pm/consignationQuote/listWlConsignationQuote"  type="1" orgtype="1" remove="0" />
+   	<menu code="menu_100_4" name="外贸委托报价" index="4" url="/pm/consignationQuote/listWmConsignationQuote"  type="1" orgtype="1" remove="0" />
+   	<menu code="menu_100_5" name="仓储委托报价" index="5" url="/pm/consignationQuote/listCcConsignationQuote"  type="1" orgtype="1" remove="0" />
+  </menu>
+  <menu code="menu_40" name="订单分配"  url="/task/listAllocationTask/1" icon="home" index="40" type="1" orgtype="1" remove="0"></menu>
+  <menu code="menu_50" name="订单查询"  index="50" url="/flow/bgimcc/toFlowImccPage/0" type="1" orgtype="1" remove="0"></menu>
+  <menu code="menu_11110" name="会员中心" icon="users" index="60" type="1"  orgtype="1"  remove="0">
+      <menu code="menu_11110_1" name="账号信息"  url="/company/info/viewUser" index="1" type="1" orgtype="1" remove="0" /> 
+      <menu code="menu_11110_2" name="单点登录" url="/integrate/integrate/listintegrate" index="2" type="1" orgtype="1" remove="0"/>
+  </menu>
+  <menu code="menu_1009" name="报表管理" icon="reportFormStatistics" index="55" type="1"  orgtype="1"  remove="0">
+     <menu code="menu_1009_1" name="订单统计" url="/order/reportFormStatistics" index="1" type="1" orgtype="1" remove="0" />
+    <menu code="menu_1009_2" name="用户统计" url="/order/listUserReportStatistics/1" index="2" type="1" orgtype="1" remove="0"/>
+  </menu>
+  <menu code="menu_11111" name="消息中心" icon="users" index="70" type="1"  orgtype="1"  remove="0">
+     <menu code="menu_11111_1" name="站内消息" url="/notice/notice/listNotice" index="1" type="1" orgtype="1" remove="0" />
+    <menu code="menu_11111_2" name="公告通知" url="/noticeinformed/noticeinformed/listMyNoticeInformed" index="2" type="1" orgtype="1" remove="0"/>
+  </menu>
+	<menu code="menu_60" name="网站管理" icon="cms" index="60" type="1" orgtype="1" remove="0">
+		<menu code="menu_60_1" name="栏目管理" url="/cms/columns/findCMSColumns" index="1" type="1" orgtype="1" remove="0"/>
+		<menu code="menu_60_2" name="内容管理" url="/cms/content/findCMSContent" index="2" type="1" orgtype="1" remove="0"/>
+		<menu code="menu_60_3" name="网站留言" url="/common/board/findCMSBoard" index="3" type="1" orgtype="1" remove="0"/>
+		<menu code="menu_60_4" name="帮助栏目" url="/cms/HelpColumns/findCMSColumns" index="4" type="1" orgtype="1" remove="0"/>
+		<menu code="menu_60_5" name="帮助内容" url="/cms/Helpcontent/findCMSContent" index="5" type="1" orgtype="1" remove="0"/>
+		<menu code="menu_60_6" name="邮件信息模板"   url="/sysconfig/Systemplate/listSystemplate"  index="6" type="1"  orgtype="1"  remove="0"></menu>
+	</menu>
+	<menu code="menu_70" name="人员角色" icon="sitemap" index="300" type="1" orgtype="1" remove="0">
+		<!-- <menu code="menu_70_1" name="人员管理" url="/organize/organize/listUserAccount" index="1" type="1" orgtype="1" remove="0">
+			<menu code="organize_listUserAccount" name="查询人员" index="1" type="2" orgtype="1" remove="0" />
+			<menu code="organize_editUserAccount" name="编辑人员" index="2" type="2" orgtype="1" remove="0" />
+			<menu code="organize_removeUserAccount" name="删除人员" index="3" type="2" orgtype="1" remove="0" />
+			<menu code="organize_enableUserAccount" name="启用人员" index="4" type="2" orgtype="1" remove="0" />
+			<menu code="organize_disableUserAccount" name="禁用人员" index="5" type="2" orgtype="1" remove="0" />
+			<menu code="organize_editUserAccountPwd" name="重置密码" index="6" type="2" orgtype="1" remove="0" />
+			<menu code="organize_listLoginLog" name="查询登录日志" index="7" type="2" orgtype="1" remove="0" />
+		</menu> -->
+		<!-- <menu code="menu_70_2" name="机构[部门]管理" url="/organize/dept/listOrgDept" index="2" type="1" orgtype="1" remove="0">
+			<menu code="dept_listOrgDept" name="查询机构[部门]" index="1" type="2" orgtype="1" remove="0" />
+			<menu code="dept_editOrgDept" name="编辑机构[部门]" index="2" type="2" orgtype="1" remove="0" />
+			<menu code="dept_removeOrgDept" name="删除机构[部门]" index="3" type="2" orgtype="1" remove="0" />
+			<menu code="dept_editOrgDeptUser" name="维护机构[部门]人员" index="4" type="2" orgtype="1" remove="0" />
+		</menu> -->
+		<menu code="menu_70_1" name="客户权限" url="/company/role/listComRole" index="1" type="1" orgtype="1" remove="0">
+	      <menu code="comrole_listComRole" name="查询角色" index="1" type="2" orgtype="1" remove="0" />
+	      <menu code="comrole_editComRole" name="编辑角色" index="2" type="2" orgtype="1" remove="0" />
+	      <menu code="comrole_removeComRole" name="删除角色" index="3" type="2" orgtype="1" remove="0" />
+	      <menu code="right_bindAuthorityCom" name="权限绑定" index="4" type="2" orgtype="1" remove="0" />
+    	</menu>
+		<menu code="menu_70_2" name="服务商角色" url="/supcompany/role/listSupRole" index="2" type="1" orgtype="1" remove="0">
+			<menu code="suprole_listSupRole" name="查询角色" index="1" type="2" orgtype="1" remove="0" />
+			<menu code="suprole_editSupRole" name="编辑角色" index="2" type="2" orgtype="1" remove="0" />
+			<menu code="suprole_removeSupRole" name="删除角色" index="3" type="2" orgtype="1" remove="0" />
+			<menu code="right_bindAuthoritySup" name="权限绑定" index="4" type="2" orgtype="1" remove="0" />
+		</menu>
+		<menu code="menu_70_3" name="平台角色" url="/organize/role/listOrgRole" index="3" type="1" orgtype="1" remove="0">
+			<menu code="role_listOrgRole" name="查询角色" index="1" type="2" orgtype="1" remove="0" />
+			<menu code="role_editOrgRole" name="编辑角色" index="2" type="2" orgtype="1" remove="0" />
+			<menu code="role_removeOrgRole" name="删除角色" index="3" type="2" orgtype="1" remove="0" />
+			<menu code="right_bindAuthority" name="权限绑定" index="4" type="2" orgtype="1" remove="0" />
+			<menu code="role_editOrgRoleUser" name="维护角色人员" index="5" type="2" orgtype="1" remove="0" />
+		</menu>
+	</menu>
+	<menu code="menu_80" name="系统管理" icon="cogs" index="50" type="1" orgtype="1" remove="0">
+		<menu code="menu_80_1" name="单点登录" url="/integrate/integrate/listintegrate" index="1" type="1" orgtype="1" remove="0"/>
+		<!-- <menu code="menu_80_2" name="邮件信息模板"   url="/sysconfig/Systemplate/listSystemplate"  index="2" type="1"  orgtype="1"  remove="0"></menu>
+		<menu code="menu_80_3" name="接口注册" url="/sysconfig/interface/listInterface" index="3" type="1" orgtype="1" remove="0"/>
+		 -->
+		 <menu code="menu_80_4" name="枚举信息"   url="/sysconfig/info/listEnumInfo"  index="4" type="1"  orgtype="1"  remove="0"></menu>
+		<!-- <menu code="menu_80_5" name="邮箱配置" url="/framework/mail/viewMailConfig" index="5" type="1" orgtype="1" remove="0">
+			<menu code="mail_viewMailConfig" name="查看邮件设置" index="1" type="2" orgtype="1" remove="0" />
+			<menu code="mail_editMailConfig" name="编辑邮件设置" index="2" type="2" orgtype="1" remove="0" />
+			<menu code="mail_removeMailConfig" name="删除邮件设置" index="3" type="2" orgtype="1" remove="0" />
+			<menu code="mail_viewMailLogTest" name="发送测试邮件" index="4" type="2" orgtype="1" remove="0" />
+		</menu>
+		<menu code="menu_80_6" name="已发邮件记录" url="/framework/mail/listMailLog" index="6" type="1" orgtype="1" remove="0">
+			<menu code="mail_viewMailConfig" name="查看邮件设置" index="1" type="2" orgtype="1" remove="0" />
+		</menu>
+		<menu code="menu_80_7" name="系统日志" url="/framework/methodlog/listMethodLog" index="7" type="1" orgtype="1" remove="0">
+			<menu code="methodlog_listMethodLog" name="查看系统日志列表" index="1" type="2" orgtype="1" remove="0" />
+		</menu>
+		<menu code="menu_80_8" name="登录日志" url="/organize/organize/listAllLoginLog" index="8" type="1" orgtype="1" remove="0">
+			<menu code="organize_listAllLoginLog" name="查看平台登录日志" index="1" type="2" orgtype="1" remove="0" />
+			<menu code="info_listAllComLoginLog" name="查看客户登录日志" index="2" type="2" orgtype="1" remove="0" />
+			<menu code="sup_listAllComLoginLog" name="查看供应商登录日志" index="3" type="2" orgtype="1" remove="0" />
+		</menu> -->
+		<menu code="menu_80_2" name="人员管理" url="/organize/organize/listUserAccount" index="1" type="1" orgtype="1" remove="0">
+      <menu code="organize_listUserAccount" name="查询人员" index="1" type="2" orgtype="1" remove="0" />
+      <menu code="organize_editUserAccount" name="编辑人员" index="2" type="2" orgtype="1" remove="0" />
+      <menu code="organize_removeUserAccount" name="删除人员" index="3" type="2" orgtype="1" remove="0" />
+      <menu code="organize_enableUserAccount" name="启用人员" index="4" type="2" orgtype="1" remove="0" />
+      <menu code="organize_disableUserAccount" name="禁用人员" index="5" type="2" orgtype="1" remove="0" />
+      <menu code="organize_editUserAccountPwd" name="重置密码" index="6" type="2" orgtype="1" remove="0" />
+      <menu code="organize_listLoginLog" name="查询登录日志" index="7" type="2" orgtype="1" remove="0" />
+    </menu>
+	</menu>
+	 <menu code="menu_899" name="日志管理" icon="cogs" index="90" type="1" orgtype="1" remove="0">
+	     <menu code="menu_899_1" name="登录日志" url="/organize/organize/listAllLoginLog" index="1" type="1" orgtype="1" remove="0">
+			<menu code="organize_listAllLoginLog" name="查看平台登录日志" index="1" type="2" orgtype="1" remove="0" />
+			<menu code="info_listAllComLoginLog" name="查看客户登录日志" index="2" type="2" orgtype="1" remove="0" />
+			<menu code="sup_listAllComLoginLog" name="查看供应商登录日志" index="3" type="2" orgtype="1" remove="0" />
+		</menu> 
+		<menu code="menu_899_2" name="已发邮件" url="/framework/mail/listMailLog" index="2" type="1" orgtype="1" remove="0">
+			<menu code="mail_viewMailConfig" name="查看邮件设置" index="1" type="2" orgtype="1" remove="0" />
+		</menu>
+		<menu code="menu_899_3" name="操作日志" url="/framework/methodlog/listMethodLog" index="3" type="1" orgtype="1" remove="0">
+			<menu code="methodlog_listMethodLog" name="查看操作日志列表" index="1" type="2" orgtype="1" remove="0" />
+		</menu>
+     </menu>
+     
+	  <menu code="menu_892" name="接口管理" icon="cogs" index="1000" type="1" orgtype="1" remove="0">
+	     <menu code="menu_892_1" name="接口注册" url="/sysconfig/interface/listInterface" index="1" type="1" orgtype="1" remove="0"/>
+     </menu>
+     
+  <menu code="menu_60" name="网站管理" icon="cms" index="60" type="1" orgtype="1" remove="0">
+    <menu code="menu_60_1" name="栏目管理" url="/cms/columns/findCMSColumns" index="1" type="1" orgtype="1" remove="0"/>
+    <menu code="menu_60_2" name="内容管理" url="/cms/content/findCMSContent" index="2" type="1" orgtype="1" remove="0"/>
+    <menu code="menu_60_3" name="网站留言" url="/common/board/findCMSBoard" index="3" type="1" orgtype="1" remove="0"/>
+  </menu>
+
+	
+	<!-- 客户   在菜单中加 orgtype="2" -->
+	<menu code="menu_29999" name="立即下单" icon="addTask" url="/sup/task/orderPrep" index="300" type="1" orgtype="2" remove="0">
+		<!-- <menu code="menu_29999_2" name="立即下单" index="2" url="/sup/task/orderPrep"  type="1" orgtype="2" remove="0" />
+		 --><!-- <menu code="menu_29999_1" name="任务列表管理" url="/sup/task/listTask" index="1" type="1" orgtype="2" remove="0"/> -->
+	</menu>
+	 <menu code="menu_90" name="产品库" icon="newspaper-o" index="200" type="1" orgtype="2" remove="0">
+		<menu code="menu_90_1" name="产品分类" url="/sup/product/product/listProduct" index="1" type="1" orgtype="2" remove="0"/>
+		<menu code="menu_90_2" name="产品管理" url="/sup/product/productType/listProductType" index="2" type="1" orgtype="2" remove="0"/>
+	</menu>
+   <menu code="menu_2100" name="首页" url="/sup/company/homePage/companyHome" icon="home" index="100"  type="1" orgtype="2" remove="0"></menu>
+   <menu code="menu_2300" name="供应链进度" url="/sup/task/listTask" icon="home" index="110"  type="1" orgtype="2" remove="0"></menu>
+  
+  <menu code="menu_2199" name="消息中心" icon="users" index="600" type="1" orgtype="2" remove="0">
+     <menu code="menu_2199_1" name="站内消息"  url="/sup/company/notice/notice/listNotice" index="1" type="1" orgtype="2" remove="0" />
+     <menu code="menu_2199_2" name="公告通知" url="/sup/company/company/listNoticeInformed" index="2" type="1" orgtype="2" remove="0"/>
+   </menu>
+  <menu code="menu_2110" name="我的订单" icon="task" url="/sup/supcompany/order/toFlowImccPage/1" index="400" type="1" orgtype="2" remove="0"></menu>
+  <menu code="menu_2111" name="待提交订单" icon="order" url="/sup/order/OrderFrom/listNoSubmitOrder" index="450" type="1" orgtype="2" remove="0"></menu>
+  <menu code="menu_2160" name="会员中心" icon="users" index="500" type="1" orgtype="2" remove="0">
+     <menu code="menu_2160_1" name="账号信息"  url="/sup/company/user/viewUser"    index="1" type="1" orgtype="2" remove="0" />
+    <menu code="menu_2160_2" name="单点登录" url="/sup/integrate/integrate/listintegrate" index="2" type="1" orgtype="2" remove="0">
+    </menu>
+  </menu>
+	<menu code="menu_2170" name="设置管理" icon="users" index="1100" type="1" orgtype="2" remove="0">
+    	<menu code="menu_2170_1" name="企业信息" url="/sup/company/company/viewCompanyInfo" index="1" type="1" orgtype="2" remove="0">
+      		<menu code="company_viewCompanyInfo" name="查看公司信息" index="1" type="2" orgtype="2" remove="0" />
+	      <menu code="company_editCompanyInfo" name="维护公司信息" index="2" type="2" orgtype="2" remove="0" />
+	    </menu>
+	    <menu code="menu_2170_2" name="子账号" url="/sup/company/companyuser/listCompanyInfoUser" index="2" type="1" orgtype="2" remove="0">
+	      <menu code="company_listCompanyInfoUser" name="查看人员信息" index="1" type="2" orgtype="2" remove="0" />
+	      <menu code="company_editCompanyInfoUser" name="维护人员信息" index="2" type="2" orgtype="2" remove="0" />
+	      <menu code="company_removeCompanyInfoUser" name="删除人员信息" index="3" type="2" orgtype="2" remove="0" />
+	      <menu code="company_editCompanyInfoUserPwd" name="修改人员密码" index="4" type="2" orgtype="2" remove="0" />
+	      <menu code="company_enableCompanyInfoUser" name="启用人员" index="5" type="2" orgtype="2" remove="0" />
+	      <menu code="company_disableCompanyInfoUser" name="禁用人员" index="6" type="2" orgtype="2" remove="0" />
+	    </menu>
+    </menu>
+    
+	
+  <!-- 供应商  在菜单中加 orgtype="3"  -->
+  <menu code="menu_1000" name="首页" icon="home" url="/sup/supcompany/homePage/supplierHome" index="10" type="1" orgtype="3" remove="0"></menu>
+  <menu code="menu_1030" name="订单管理" icon="task" url="/sup/supcompany/order/toOrderListPage/0" index="20" type="1"  orgtype="3"  remove="0"></menu>
+	<menu code="menu_1031" name="待接收订单" icon="order" url="/sup/order/OrderFrom/listSupNoReceiveOrder" index="30" type="1" orgtype="3" remove="0"></menu>
+	<menu code="menu_1070" name="会员中心" icon="users" index="300" type="1" orgtype="3" remove="0">
+		<menu code="menu_1070_1" name="账号信息"  url="/sup/company/user/viewUser"    index="1" type="1" orgtype="3" remove="0" />
+		 <menu code="menu_1070_2" name="单点登录" url="/sup/integrate/integrate/listintegrate" index="2" type="1" orgtype="3" remove="0">
+		</menu>
+	</menu>
+	<menu code="menu_10992" name="消息中心" icon="users" index="400" type="1" orgtype="3" remove="0">
+		<menu code="menu_1000_1" name="公告通知" url="/sup/supcompany/supcompany/listSupNoticeInformed" index="2" type="1" orgtype="3" remove="0"></menu>
+  		 <menu code="menu_1000_2" name="站内消息"  url="/sup/notice/notice/listNotice"    index="1" type="1" orgtype="3" remove="0" />
+    </menu>
+	<menu code="menu_10993" name="委托报价" icon="cq" index="500" type="1" orgtype="3" remove="0">
+		<menu code="menu_10993_1" name="报关委托报价" url="/sup/consignationQuote/listSupplierConsignationQuote/1" index="1" type="1" orgtype="3" remove="0"></menu>
+  		 <menu code="menu_10993_2" name="物流委托报价"  url="/sup/consignationQuote/listSupplierConsignationQuote/2"    index="2" type="1" orgtype="3" remove="0" />
+  		 <menu code="menu_10993_3" name="外贸委托报价"  url="/sup/consignationQuote/listSupplierConsignationQuote/3"    index="3" type="1" orgtype="3" remove="0" />
+  		 <menu code="menu_10993_4" name="仓储委托报价"  url="/sup/consignationQuote/listSupplierConsignationQuote/4"    index="4" type="1" orgtype="3" remove="0" />
+    </menu>
+</menus>

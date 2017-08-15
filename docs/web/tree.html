@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title> </title>
+		<link rel="stylesheet" type="text/css" href="css/pro.css"/>
+          <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script> 
+          <script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+          	<script type="text/javascript">
+			$(document).ready(function() {
+
+								$("#firstpane .menu_body:eq(0)").show();
+				$("#firstpane h3.menu_head").click(function() {
+					$(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+					$(this).siblings().removeClass("current");
+				});
+								$(".menu_2").click(function() {
+					$(this).addClass("current").next("div.menu_body1").slideToggle(300).siblings("div.menu_body1").slideUp("slow");
+					$(this).siblings().removeClass("current");
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<div style="position: relative; z-index: 999;">
+		<div class="nav">
+			<span class="left" style="font-size: 15px;padding-left: 32px;"></span>
+			<span class="right" style="font-size: 13px; padding-right: 22px;" onclick="javascript:window.location.href='login1.html'"><a href="#"><i class="iconfont icon_exe">&#xe602;</i></a></span>
+		</div>
+		<div id="firstpane" class="menu_list">
+			<h3 class="menu_head current_menu " ><i class="iconfont icon_loc"  >&#xe601;</i>系统管理</h3>
+						<div style="display:none" class="menu_body">
+				<a href="#">邮箱配置</a>
+				<a href="#">已发邮件记录</a>
+				<a href="#">系统日志</a>
+				<a href="#">登录日志</a>
+			</div>
+			<h3 class="menu_head" onclick="javascript:;"  id="no_access"><i class="iconfont icon_loc" >&#xe616;</i>组织结构管理</h3>
+								<div style="display:none" class="menu_body">
+				<a href="#">人员管理</a>
+				<a href="#">机构[部门]管理</a>
+				<a href="#">角色管理</a>
+			</div>
+			<h3 class="menu_head current_menu " style="display: block;"><i class="iconfont icon_loc"  >&#xe601;</i>任务</h3>
+						<div style="display:block" class="menu_body">
+				<a href="#" class="menu_2" >订单1</a>
+				<div style="display:block" class="menu_body1">
+				<a href="#">单据</a>
+			</div>
+				<a href="#" class="menu_2" >订单2</a>
+				<div style="display:block" class="menu_body1">
+				<a href="#">单据</a>
+			</div>
+			</div>
+
+
+		</div>
+		<div class="m_body">
+			<div class="now_place">
+				<div class="n_btn"><button  class="btn_k" style="margin-left: 20px;">平台登录日志</button><button class="btn_p" >客户登录日志</button><button class="btn_p" >供应商登录日志</button></div>
+			</div>
+			
+			
+			<div class="report_main">
+					<div  class="pt_rz">平台登录日志表</div>
+		<div class="white_place" id="white_place">
+        <div class="imp_txt">
+        	<label>关键字：</label>
+        	<input type="text" id="" value="" />
+        	        	<label style="margin-left: 10px;">登录时间：</label>
+        	<input type="text" id="" value="" />
+        	<span>-</span>
+        	<input type="text" id="" value="" />
+        	<button class="cx_btn">查询</button>
+        </div>
+		<div class="clear"></div>
+				<div class="table_css" style="display: block;width: 100%;min-width: 1000px;" id="hz_page">
+			<table border="0" cellspacing="0" cellpadding="0" >
+<tr class="headline">
+					<td style="width: 4%;" >序号</td>
+					<td style="width: 14%;">登录人<span class="sj_sx"><div><img src="images/moreicon-up.png"/></div><div><img src="images/moreicon-down.png"/></div></span></td>
+					<td style="width: 18%;">登录账号<span class="sj_sx"><div><img src="images/moreicon-up.png"/></div><div><img src="images/moreicon-down.png"/></div></span></td>
+					<td style="width: 15%;" >登录IP<span class="sj_sx"><div><img src="images/moreicon-up.png"/></div><div><img src="images/moreicon-down.png"/></div></span></td>
+					<td style="width: 16%;">Host信息<span class="sj_sx"><div><img src="images/moreicon-up.png"/></div><div><img src="images/moreicon-down.png"/></div></span></td>
+					<td style="width: 10%;">登录信息<span class="sj_sx"><div><img src="images/moreicon-up.png"/></div><div><img src="images/moreicon-down.png"/></div></span></td>
+					<td style="width: 22%;">登录时间<span class="sj_sx"><div><img src="images/moreicon-up.png"/></div><div><img src="images/moreicon-down.png"/></div></span></td>
+				</tr>
+				    <tr class="content">
+					<td >1</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+				    <tr class="content td_blue bg_g" >
+					<td >2</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+				
+				                <tr class="content">
+						<td >3</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+
+				</tr>
+				                <tr class="content td_blue bg_g">
+					<td >4</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+				                <tr class="content">
+					<td >5</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+
+				</tr>
+				                <tr class="content td_blue bg_g">
+					<td >6</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+				                <tr class="content">
+					<td >7</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+						                <tr class="content td_blue bg_g">
+					<td >8</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+				                <tr class="content">
+					<td >9</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+										                <tr class="content td_blue bg_g">
+					<td >10</td>
+					<td >管理员</td>
+					<td >admin@admin.com</td>
+					<td >127.0.0.1</td>
+					<td>2017/05/15</td>
+					<td >Windows</td>
+					<td >2017-06-08 18:36:13</td>
+				</tr>
+			</table>
+		</div>
+
+				<div class="clear"></div>
+		</div>
+</div>
+</div>
+
+</div>
+<div class="op" id="op"  ></div>
+	    <div class="box_con animated zoomIn noaccess">
+				<div class="expert" id="drop">
+				<span class="expert_txt">基本信息</span>
+				<span  class="close right fun_close"  id="close">×</span>
+			</div>
+<div class="be_msg"> 
+	<div class="msg_email"><div class="wid_e ">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</div><div class="font">admin@admin.com</div></div>
+	<div class="msg_email"><div class="wid_e">用户名称</div><div  class="font">管理员</div></div>
+	<div class="msg_email"><div class="wid_e">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机</div><div  class="font">1869999456</div></div>
+	<div class="msg_email"><div class="wid_e">所属部门</div><div  class="font"></div></div>
+	<div class="msg_email"><div class="wid_e">系统角色</div><div  class="font"></div></div>
+	<div class="msg_email"><div class="wid_e">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态</div><div><button class="bug_btn sure font">已通过</button></div></div>
+</div>
+			</div>
+
+	</body>
+
+</html>

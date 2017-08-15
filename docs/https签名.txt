@@ -1,0 +1,45 @@
+1. 运行CMD命令:
+keytool -genkey -alias pmApp -keypass pm@pm.com -keyalg RSA -keysize 1024 -validity 3650 -keystore d:\pm.keystore -storepass pm@pm.com -dname "CN=PM,OU=PM,O=PM,L=shanghai,ST=shanghai,C=CN"
+
+2. 打开Tomcat根目录下的 /conf/server.xml找到如下配置段如下:
+	<Connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol" SSLEnabled="true"   
+		maxThreads="150" scheme="https" secure="true"   
+		clientAuth="false" sslProtocol="TLS"   
+		keystoreFile="conf/pm.keystore" keystorePass="pm@pm.com" />
+
+3. 证书的导出(可选):
+keytool -export -alias pmApp -keystore d:\pm.keystore -storepass pm@pm.com -file d:\pm.crt
+
+---------------------------客户端认证(可选)--------------------------------
+
+1. 生成客户端秘钥:
+keytool -genkey -v -alias pmApp -storepass pm@pm.com -keypass pm@pm.com -keyalg RSA -storetype PKCS12 -validity 3650 -keystore d:\pm.p12 -dname "CN=PM,OU=PM,O=PM,L=shanghai,ST=shanghai,C=CN"
+
+2. 让服务器信任客户端证书:
+keytool -export -alias pmApp -keystore d:\pm.p12 -storetype PKCS12 -storepass pm@pm.com -rfc -file d:\pm.cer
+
+3. 导入到服务器的证书库
+keytool -import -v -file d:\pm.cer -keystore d:\pm.keystore -storepass pm@pm.com
+
+4. 导入浏览器
+打开IE > Internet选项 > 内容 > 证书 > 导入
+
+5. 设置tomcat配置,打开Tomcat根目录下的 /conf/server.xml,修改如下:
+<Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"  
+           maxThreads="150" scheme="https" secure="true"  
+           clientAuth="false" sslProtocol="TLS"  
+           keystoreFile="conf/pm.keystore" keystorePass="pm@pm.com"  
+           truststoreFile="conf/pm.keystore" truststorePass="pm@pm.com" />  
+
+注意服务端证书名保持一致
+属性说明：
+clientAuth:设置是否双向验证，默认为false，设置为true代表双向验证
+keystoreFile:服务器证书文件路径
+keystorePass:服务器证书密码
+truststoreFile:用来验证客户端证书的根证书，此例中就是服务器证书
+truststorePass:根证书密码
+
+6. keystore信息的查看：
+keytool -list -v -keystore d:\pm.keystore -storepass pm@pm.com
+
+7. 如果不需要端口号访问，请将 8443 改成 443，即可

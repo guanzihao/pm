@@ -1,0 +1,271 @@
+
+*{
+	font-size: 14px;
+}
+
+a span{
+	 	font-size:12px !important;
+	 }
+
+label{
+	padding-right: 5px;
+	font-weight: 400 !important;
+}
+
+.wrapper{
+	padding: 0px !important;
+}
+
+/*a标签*/
+			
+.my_a:hover {
+	color: #f90;
+	cursor:pointer;
+}
+
+a:hover {
+	color: #f90;
+	cursor:pointer;/*显示手型*/
+}
+
+.my_a {
+	color: #06c;
+}
+
+a {
+	color: rgb(51, 122, 183);
+}
+
+/*table表格*/
+table{
+	border: 1px solid #FFFFFF !important; 
+	font-weight:normal!important;
+}
+th {
+	background: #dae2ed !important;
+	font-style: inherit !important;
+	height: 36px !important;
+	text-align: center !important;
+	border-bottom: 1px solid #c8d2e0 !important;
+	font-size: 14px !important;
+	color: #333333 !important;
+	font-weight:normal!important;
+}
+
+tr td {
+	border-bottom: 1px solid #c8d2e0 !important;
+	border-left: 0px solid #c8d2e0 !important;
+	border-right: 0px solid #c8d2e0 !important;
+	text-align: center !important;
+}
+
+td {
+	background: #fff !important;
+	height: 40px !important;
+	border-bottom: 1px solid #c8d2e0 !important;
+	font-size: 12px !important;
+	color: #333333 !important;
+	vertical-align: middle !important !important;
+}
+
+/*按钮*/
+.myBtn {
+	background: #FFFFFF;
+	border:1px solid #6CA6CD;
+	padding: 4px 10px;
+	border-radius: 4px;
+	margin-top: 15px;
+	margin-bottom: 8px;
+	margin-right: 4px;
+	color: black;
+}
+.myBtn:hover {
+	background: #FFFFFF;
+	border:2px solid #ff7519;
+	padding: 3px 9px;
+	border-radius: 4px;
+	margin-top: 15px;
+	margin-bottom: 8px;
+	margin-right: 4px;
+	color: black;
+}
+
+.myBtn2 {
+	display: inline-block;
+	wight:50px;
+	height:26px;
+	background: #FFFFFF;
+	border:1px solid #6CA6CD;
+	padding: 3px 10px;
+	border-radius: 4px;
+	/* margin-top: 15px; */
+	margin-bottom: 8px;
+	margin-right: 4px;
+	color: black;
+	box-sizing:border-box;
+}
+
+.myBtn2:hover {
+	border:2px solid #ff7519;
+}
+
+/*下边距*/
+.dx_jianju{
+	border-bottom: 50px !important;
+}
+
+/*上边距*/
+.ds_jianju{
+	border-top: 50px !important;
+}
+
+
+/*橙色按钮*/
+.button1 {
+	background: #ff7519;
+	color: #fff;
+	padding: 4px 10px;
+	border-radius: 4px;
+	border-color: #ff7519 !important;
+	margin-left: 5px;
+}
+
+.button1:hover {
+	background: #EE7621;
+	color: #fff;
+	padding: 4px 10px;
+	border-radius: 4px;
+	border-color: #ff7519 !important;
+}
+
+/*大按钮*/
+.button2 {
+	padding: 6px 20px;
+	background: #fff;
+	color: #333;
+	border: 1px solid #c6cad1;
+	border-radius: 2px;
+	font-size: 18px;
+}
+
+/*大按钮不能点击*/
+.button3 {
+	padding: 6px 20px;
+	background: #fff;
+	color: #333;
+	border: 1px solid #c6cad1;
+	border-radius: 2px;
+	font-size: 18px;
+	background: #f5f7fa;
+	color: #cccccc;
+	border-color: #dae2ed;
+}
+
+/*input输入框*/
+.my_input {
+	height: 30px;
+	width: 340px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	text-indent: 1px;
+}
+
+/*select选择框*/
+.my_select {
+	height: 30px;
+	width: 340px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	text-indent: 1px;
+}
+
+/*分页时的  span*/
+.pagSpan{
+	font-size: 12px;
+	line-height:30px;
+	height:30px;
+	margin: 0 5px;
+}
+
+/* * 的样式 */
+.ired{
+	margin:0px 2px;
+	color: #FF0000;
+	text-align: center;
+	height: 14px;
+	line-height: 14px;
+}
+
+
+/* 所有用户 */
+.alluser{
+	background-color: #9BCD9B !important;
+}
+
+/* 只平台用户 */
+.onlypt{
+	background-color: #BCD2EE !important;
+}
+
+/*只有客户*/
+.onlykh{
+	background-color: #96CDCD !important;
+}
+
+/*只有供应商*/
+.onlygys{
+	background-color: #8FBC8F !important;
+}
+
+/*状态  已通过*/
+.tongguo{
+	background-color: #71C671 !important;
+}
+
+/*状态  已驳回*/
+.bohui{
+	background-color: #EE9A00 !important;
+}
+
+/*已审核*/
+.yishenhe{
+	background-color: #71C671 !important;
+}
+
+/*状态 待审核*/
+.shenghe{
+	background-color: #EE7942 !important;
+}
+/*未提交*/
+.weitijiao{
+	background-color: #FFDEAD !important;
+}
+
+/*已提交*/
+.yitijiao{
+	background-color: #7CCD7C !important;
+}
+
+/*启用*/
+.qiyong{
+	background-color: #90EE90 !important;
+}
+/*禁用*/
+.jinyong{
+	background-color: #EE4000 !important;
+}
+
+
+/*下拉框*/
+select{
+	padding: 0px!important;
+	font-style: inherit !important;
+	height: 30px;
+}
+
+/* 小字体 */
+.xfint{
+	font-size: 12px;
+}
+
+

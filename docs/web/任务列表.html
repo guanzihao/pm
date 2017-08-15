@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>云贸通</title>
+		<link rel="stylesheet" type="text/css" href="css/pro.css"/>
+          <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script> 
+          <script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div style="position: relative; z-index: 999;">
+		<div class="nav">
+			<span class="left" style="font-size: 15px;padding-left: 32px;">云贸通</span>
+			<span class="right" style="font-size: 13px; padding-right: 22px;" onclick="javascript:window.location.href='login1.html'"><a href="#"><i class="iconfont icon_exe">&#xe602;</i>Admin</a></span>
+		</div>
+		<div id="firstpane" class="menu_list">
+			<h3 class="menu_head  current_menu" onclick="javascript:window.location.href='index.html'">首页</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='.html';">计划安排</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='.html';">任务管理</h3>
+             <div style="display:block" class="menu_body">
+				<a href="#">任务列表</a>
+				<a href="#">订单列表</a>
+				<a href="#">单据列表</a>
+			</div>
+			<h3 class="menu_head" onclick="javascript:window.location.href='.html';">站内消息</h3>
+            <h3 class="menu_head " onclick="javascript:window.location.href='index.html'">公告通知</h3>           
+			<h3 class="menu_head" onclick="javascript:window.location.href='.html';">统计管理</h3>
+            <h3 class="menu_head" onclick="javascript:window.location.href='.html';">个人信息</h3>
+		</div>
+		<div class="m_body">
+			<div class="now_place">
+				<span class="now">当前位置：</span><a href="#" class="now_place">任务列表</a>	
+			</div>
+		<script type="text/javascript">  
+        function showdiv(){  
+            document.getElementById('mm').style.display = 'none';  
+            document.getElementById('strhref').innerHTML="&#xe603;&nbsp;显示搜索条件";  
+            document.getElementById('white_place').style.height="830px";
+            document.getElementById('white_place').style.marginTop="10px";
+            document.getElementById('strhref').href="javascript:hidediv()";  
+        }  
+        function hidediv(){  
+            document.getElementById('mm').style.display = 'block';  
+            document.getElementById('strhref').innerHTML="&#xe605;&nbsp;隐藏搜索条件";  
+                        document.getElementById('white_place').style.height="668px";
+            document.getElementById('strhref').href="javascript:showdiv()";  
+        }  
+    </script>  
+			<div class="pro_condition" id="mm" style="display:block;">
+					<ul class="d_manager">
+					<li>状态：</li>
+					<li style="padding-left: 38px;"><a href="" class="t_dec" >全部</a></li>
+					<li><a href="#">未开始</a></li>
+					<li><a href="#">执行中</a></li>
+                    <li><a href="#">已完成</a></li>
+				</ul>
+				<div class="clear"></div>
+					<div class="start_time">
+					<div>开始时间：</div>
+					<div style="padding-left: 10px;"><a href="" class="t_dec">全部</a></div>
+					<div>
+						<dl class="select" style="    position: absolute; margin-top: -11px;margin-left: -3px;">
+		<dt style="width: 68px;"><span id="changeone">2017年</span><i class="iconfont arrow">&#xe617;</i></dt>
+		<dd style="    position: absolute;z-index: 10000;" id="dd_a1">
+			<ul class="u_long1">
+				<li><a href="#">2017年</a></li>
+				<li><a href="#">2016年</a></li>
+				<li><a href="#">2015年</a></li>
+				<li><a href="#">2014年</a></li>
+				<li><a href="#">2013年</a></li>
+				<li><a href="#">2012年</a></li>
+				<li><a href="#">2011年</a></li>
+				<li><a href="#">2010年</a></li>
+				<li><a href="#">2009年</a></li>
+				<li><a href="#">2008年</a></li>
+				<li><a href="#">2007年</a></li>
+				<li><a href="#">2006年</a></li>
+				<li><a href="#">2005年</a></li>
+				<li><a href="#">2004年</a></li>
+				<li><a href="#">2003年</a></li>
+				<li><a href="#">2002年</a></li>
+				<li><a href="#">2001年</a></li>
+				<li><a href="#">2000年</a></li>
+			</ul>
+		</dd>
+	</dl>
+					</div>
+					<div  style="    padding-left: 103px;"><a href="#">全年</a></div>
+					<div><a href="#">1月</a></div>
+					<div><a href="#">2月</a></div>
+					<div><a href="#">3月</a></div>
+					<div><a href="#">4月</a></div>
+					<div><a href="#">5月</a></div>
+					<div><a href="#">6月</a></div>
+					<div><a href="#">7月</a></div>
+					<div><a href="#">8月</a></div>
+					<div><a href="#">9月</a></div>
+					<div><a href="#">10月</a></div>
+					<div><a href="#">11月</a></div>
+					<div><a href="#">12月</a></div>
+				</div>
+				<div class="clear"></div>
+				</div>
+		<div class="white_place" id="white_place">
+		 
+		<div class="function">
+			
+			<div style="float: right; padding-right: 12px;" class="pages">
+				<ul>
+					<li>每页显示</li>
+					<li class="num_a">10</li>
+					<li class="num_b">20</li>
+					<li class="num_b">30</li>
+					<li>总记录数：</li>
+					<li>38</li>
+					<li class="curs hove">上页</li>
+					<li class="fun_on curs hove">1</li>
+					<li class="curs hove">2</li>
+					<li class="curs hove">3</li>
+					<li class="curs hove">下页</li>
+					<li>跳转</li>
+					<li ><input type="text" id="" value="1" class="num_c" /></li>
+					<li>页</li>
+					<li class="fun_on curs">GO</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="clear"></div>
+	
+				<div class="table_css" style="display: block;width: 100%;min-width: 1000px;" id="hz_page">
+			<table border="0" cellspacing="0" cellpadding="0">
+<tr class="headline">
+					<td style="width: 12%;">操作</td>
+					<td style="width: 4%;">序号</td>
+                    <td style="width: 6%;">流水号</td>
+                    <td style="width: 8%;">类型</td>
+                    <td style="width: 8%;">提交的日期</td>
+					<td style="width: 14%;">公司名称</td>
+					<td style="width: 8%;">任务</td>
+					<td style="width: 8%;" >预计开始日期↓</td>
+					<td style="width: 8%;">预计结束日期↓</td>
+					
+				</tr>
+				    <tr class="content">
+                    <td style="color: #fe4543;"><a href="new_pro3.html" style="color: #38A4FC;cursor: pointer;">计划安排<i class="iconfont icon_locbj" >&#xe619;</i></a><a href="jdshow.html" style="color: #38A4FC;cursor: pointer;">任务进度<i class="iconfont icon_locbj" >&#xe60f;</i></a>
+						</td>
+					<td>1</td>
+                    <td>2017061300001</td>
+                    <td>报关</td>
+                    <td>2017/06/13</td>
+					<td><a href="#" >3M公司出口订单</a></td>
+					<td >3M公司</td>
+					<td >2017/05/02</td>
+					<td >2017/05/02</td>
+					
+				</tr>
+                
+								   
+				              
+					
+				    <tr class="content td_blue" >
+                    <td ><a href="new_pro3.html" style="color: #38A4FC;cursor: pointer;">计划安排<i class="iconfont icon_locbj" >&#xe619;</i></a><a href="jdshow.html" style="color: #38A4FC;cursor: pointer;">任务进度<i class="iconfont icon_locbj" >&#xe60f;</i></a></td>
+					<td >2</td>
+                    <td>2017061300002</td>
+                    <td>报关</td>
+                    <td>2017/06/13</td>
+					<td ><a href="#">货运公司1出口订单</a></td>
+					<td >货运公司1</td>
+					<td >2017/05/19</td>
+					<td >2017/05/19</td>
+					
+				</tr>
+				
+				                
+				                
+				                
+				               
+				                				             
+			</table>
+		</div>
+		
+		
+		
+		<div style="float: right;padding-right: 30px; margin-top: 25px;" class="pages">
+				<ul>
+					<li>每页显示</li>
+					<li class="num_a">10</li>
+					<li class="num_b">20</li>
+					<li class="num_b">30</li>
+					<li>总记录数：</li>
+					<li>38</li>
+					<li class="curs hove">上页</li>
+					<li class="fun_on curs hove">1</li>
+					<li class="curs hove">2</li>
+					<li class="curs hove">3</li>
+					<li class="curs hove">下页</li>
+					<li>跳转</li>
+					<li ><input type="text" id="" value="1" class="num_c" /></li>
+					<li>页</li>
+					<li class="fun_on curs">GO</li>
+				</ul>
+			</div>
+				<div class="clear"></div>
+		</div>
+
+</div>
+
+</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,17 @@
+.breadcrumb {
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0px 22px 0px 12px;
+  display: inline-block;
+}
+.navbar-right {
+  float: right!important;
+  margin-right: 0px;
+}
+.navbar-top-links li a {
+  padding: 20px 10px;
+  min-height: 10px;
+}
+.navbar-top-links li {
+  margin-right: 20px;
+}

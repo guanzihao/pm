@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>云贸通</title>
+		<link rel="stylesheet" type="text/css" href="css/pro.css"/>
+          <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script> 
+          <script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div style="position: relative; z-index: 999;">
+		<div class="nav">
+			<span class="left" style="font-size: 15px;padding-left: 32px;">云贸通</span>
+			<span class="right" style="font-size: 13px; padding-right: 22px;" onclick="javascript:window.location.href='login1.html'"><a href="#"><i class="iconfont icon_exe">&#xe602;</i>Admin</a></span>
+		</div>
+		<div id="firstpane" class="menu_list">
+			<h3 class="menu_head  " onclick="javascript:window.location.href='index.html'">首页</h3>
+			<h3 class="menu_head current_menu" onclick="javascript:window.location.href='.html';">计划安排</h3>
+			<h3 class="menu_head" onclick="javascript:window.location.href='.html';">任务管理</h3>
+             <div style="display:block" class="menu_body">
+				<a href="#">任务列表</a>
+				<a href="#">订单列表</a>
+				<a href="#">单据列表</a>
+			</div>
+			<h3 class="menu_head" onclick="javascript:window.location.href='.html';">站内消息</h3>
+            <h3 class="menu_head " onclick="javascript:window.location.href='index.html'">公告通知</h3>           
+			<h3 class="menu_head" onclick="javascript:window.location.href='.html';">统计管理</h3>
+            <h3 class="menu_head" onclick="javascript:window.location.href='.html';">个人信息</h3>
+		</div>
+		<div class="m_body" >
+			<div class="now_place">
+				<span class="now">当前位置：</span><span>计划安排</span>
+			</div>
+
+		<div class="white_place" style="    min-height: 183px; margin-top: 10px;border-bottom: 1px solid #ccc;padding-bottom: 10px;">
+				<div class="pro_titile" style="display: block;width: 100%;min-width: 1000px;" >
+			<table border="0" cellspacing="0" cellpadding="0">
+<tr class="fon_size">
+					<td style="width: 113px;">客户名称：</td>
+					<td style="width: 240px;">3M公司</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="fon_size main_color">
+					<td>任务标题：</td>
+					<td>出口订单</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="fon_size">
+					<td>任务要求：</td>
+					<td>时间紧，任务重</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="fon_size main_color">
+					<td>期望开始日期：</td>
+					<td>2017-05-02</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="fon_size">
+					<td>期望完成日期：</td>
+					<td>2017-05-20</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+</div>
+
+		<div class="white_place" id="white_place">
+		 
+		
+		<div class="clear"></div>
+		
+				<div class="table_css" style="display: block;width: 100%;min-width: 1000px;" id="hz_page">
+			<table border="0" cellspacing="0" cellpadding="0">
+<tr class="headline">
+					<td style="width: 4%;">序号</td>
+					<td style="width: 14%;">关键节点</td>
+					<td style="width: 8%;">节点类型</td>
+					<td style="width: 8%;" >预计开始日期↓</td>
+					<td style="width: 6%;">预计结束日期↓</td>
+					<td style="width: 12%;">操作</td>
+				</tr>
+				    <tr class="content">
+					<td>1</td>
+					<td><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#" >接单</a></td>
+					<td >&nbsp;</td>
+					<td >2017/05/02</td>
+					<td >2017/05/02</td>
+					<td style="color: #fe4543;">&nbsp;</td>
+				</tr>
+				    <tr class="content td_blue" >
+					<td >2</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">订舱</a></td>
+					<td ></td>
+					<td >2017/05/19</td>
+					<td >2017/05/19</td>
+					<td ></td>
+				</tr>
+				    <tr class="content">
+					<td>3</td>
+					<td><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#" >做箱／装货</a></td>
+					<td ></td>
+					<td >2017/05/02</td>
+					<td >2017/05/02</td>
+					<td style="color: #fe4543;">
+						</td>
+				</tr>
+				    <tr class="content td_blue" >
+					<td >4</td>
+					<td ><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#">报关</a></td>
+					<td >内部子任务</td>
+					<td >2017/05/19</td>
+					<td >2017/05/19</td>
+					<td style="color: #fe4543;"><a href="new_pro2.html" style="color: #38A4FC;cursor: pointer;">设置<i class="iconfont icon_locbj" >&#xe60f;</i></a>
+						</td>
+				</tr>
+				    <tr class="content">
+					<td>5</td>
+					<td><i class="iconfont mxpagexm_an">&#xe611;</i><a href="#" >出运</a></td>
+					<td >&nbsp;</td>
+					<td >2017/05/02</td>
+					<td >2017/05/02</td>
+					<td style="color: #fe4543;">&nbsp;</td>
+				</tr>           				             
+			</table>
+		</div>
+				<div class="clear"></div>
+		</div>
+
+</div>
+
+</div>
+	</body>
+
+</html>
